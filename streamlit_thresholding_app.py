@@ -14,13 +14,13 @@ def get_image_download_link(img, filename, text):
     return href
 
 # Set title.
-st.sidebar.title('Image Thresholding using OpenCV')
+st.title('Image Thresholding using OpenCV')
 
 # Specify canvas parameters in application
-uploaded_file = st.sidebar.file_uploader("Upload Image to restore:", type=["png", "jpg"])
+uploaded_file = st.file_uploader("Upload Image to perform thresholding:", type=["png", "jpg"])
 
 # Create a Slider and get the threshold from the slider.
-threshold = st.sidebar.slider("SET Threshold", min_value=0.0, max_value=255.0, step=1.0, value=150.0)
+threshold = st.slider("SET Threshold", min_value=0.0, max_value=255.0, step=1.0, value=150.0)
 
 if uploaded_file is not None:
     # Convert the file to an opencv image.
